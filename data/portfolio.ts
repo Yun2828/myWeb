@@ -3,7 +3,6 @@ export type RoleFocus = "software-engineering" | "ai-ml" | "retrieval-research";
 export const roleFocuses: { id: RoleFocus; label: string }[] = [
   { id: "software-engineering", label: "Software Engineering" },
   { id: "ai-ml", label: "AI / Machine Learning" },
-  { id: "retrieval-research", label: "Retrieval / Research" },
 ];
 
 export type PortfolioItem = { roles: RoleFocus[] };
@@ -27,25 +26,47 @@ export const experience = [
   { role: "Software Group Lead", organization: "Abbott x Society of Women Engineers", dates: "October 2025 - May 2026", summary: "Led embedded-systems development for an Arduino-based medical-device clip-closing mechanism.", highlights: ["Worked on microcontroller software.", "Supported hardware and software integration.", "Focused on more consistent actuation."], tags: ["Arduino", "Embedded Systems", "Hardware Integration"], roles: ["software-engineering"] as RoleFocus[] },
 ];
 
+export const githubRepositoriesUrl = "https://github.com/Yun2828?tab=repositories";
+export const contactEmail = "yunwaddyoo01@gmail.com";
+
 export const projects = [
-  { title: "Semantic Book Recommender", category: "AI, ML & Retrieval", description: "Built a semantic recommendation engine using embeddings and cosine similarity.", highlights: ["Reduced query latency by 60% through optimized vector storage.", "Added zero-shot text classification for book categories.", "Achieved 78% classification accuracy."], technologies: ["Python", "LangChain", "Gradio", "OpenAI", "pandas", "NumPy", "Matplotlib"], github: undefined, roles: ["ai-ml", "retrieval-research"] as RoleFocus[] },
-  { title: "Malicious URL Analyzer", category: "AI, ML & Retrieval", description: "Built a phishing-detection prototype combining rule-based URL analysis with machine-learning models.", highlights: ["Combined Logistic Regression and Random Forest.", "Generated interpretable risk scores.", "Detected more than 10 phishing indicators."], technologies: ["Python", "Streamlit", "Logistic Regression", "Random Forest", "Machine Learning"], github: undefined, roles: ["ai-ml"] as RoleFocus[] },
-  { title: "Stock Price Predictor", category: "AI, ML & Retrieval", description: "Built an LSTM model for stock-price prediction using historical market data.", highlights: ["Performed exploratory analysis on data from nine companies.", "Used a sliding 60-day input window.", "Built a five-layer LSTM.", "Used dropout and Adam optimization to reduce overfitting."], technologies: ["Python", "TensorFlow", "Keras", "pandas", "NumPy", "scikit-learn", "Matplotlib"], github: undefined, roles: ["ai-ml"] as RoleFocus[] },
-  { title: "Credit Card Fraud Detector", category: "AI, ML & Retrieval", description: "Built a Random Forest fraud detector for an imbalanced transaction dataset.", highlights: ["Achieved 97.47% precision.", "Achieved 87.01% F1 score.", "Evaluated false positives and false negatives with a confusion matrix."], technologies: ["Python", "pandas", "NumPy", "scikit-learn", "Matplotlib"], github: undefined, roles: ["ai-ml"] as RoleFocus[] },
-  { title: "FitnessIQ", category: "Software Engineering", status: "In Development", description: "Building a full-stack fitness platform for workout tracking and nutrition planning.", highlights: ["Designed a microservices backend with four core services.", "Uses Spring Boot and MySQL.", "Uses RabbitMQ for asynchronous communication.", "Uses Spring Cloud Config for centralized configuration.", "Integrates Gemini API for AI-assisted recommendations."], technologies: ["Java", "Spring Boot", "React", "MySQL", "Gemini API", "REST APIs", "Docker", "AWS", "RabbitMQ", "Microservices"], github: undefined, roles: ["software-engineering", "ai-ml"] as RoleFocus[] },
-  { title: "Markr", category: "Software Engineering", description: "Built a full-stack notes application supporting images, labels, and user-scoped data.", highlights: ["Owned the note-taking workflow across frontend, API, and database.", "Implemented collaborative note editing for authenticated users."], technologies: ["React", "Express.js", "MongoDB", "REST APIs", "Azure"], github: undefined, roles: ["software-engineering"] as RoleFocus[] },
-  { title: "Real-time Chat Rooms", category: "Software Engineering", description: "Built a real-time chat application using Socket.IO and bidirectional communication.", highlights: ["Messages update without page reloads.", "Implemented backend routing with Express."], technologies: ["JavaScript", "Node.js", "Express", "Socket.IO", "HTML", "CSS"], github: undefined, roles: ["software-engineering"] as RoleFocus[] },
-  { title: "Daft Open Source Contribution", category: "Open Source & Systems", description: "Contributed PySpark-compatible to_degrees and to_radians aliases to Daft's numeric expression API.", highlights: [], technologies: ["Python"], github: undefined, roles: ["software-engineering"] as RoleFocus[] },
+  { title: "Semantic Book Recommender", category: "AI / Machine Learning", description: "Built a semantic recommendation engine using embeddings and cosine similarity.", highlights: ["Reduced query latency by 60% through optimized vector storage.", "Added zero-shot text classification for book categories.", "Achieved 78% classification accuracy."], technologies: ["Python", "LangChain", "Gradio", "OpenAI", "pandas", "NumPy", "Matplotlib"], github: githubRepositoriesUrl, roles: ["ai-ml", "retrieval-research"] as RoleFocus[] },
+  { title: "Malicious URL Analyzer", category: "AI / Machine Learning", description: "Built a phishing-detection prototype combining rule-based URL analysis with machine-learning models.", highlights: ["Combined Logistic Regression and Random Forest.", "Generated interpretable risk scores.", "Detected more than 10 phishing indicators."], technologies: ["Python", "Streamlit", "Logistic Regression", "Random Forest", "Machine Learning"], github: githubRepositoriesUrl, roles: ["ai-ml"] as RoleFocus[] },
+  { title: "Stock Price Predictor", category: "AI / Machine Learning", description: "Built an LSTM model for stock-price prediction using historical market data.", highlights: ["Performed exploratory analysis on data from nine companies.", "Used a sliding 60-day input window.", "Built a five-layer LSTM.", "Used dropout and Adam optimization to reduce overfitting."], technologies: ["Python", "TensorFlow", "Keras", "pandas", "NumPy", "scikit-learn", "Matplotlib"], github: githubRepositoriesUrl, roles: ["ai-ml"] as RoleFocus[] },
+  { title: "Credit Card Fraud Detector", category: "AI / Machine Learning", description: "Built a Random Forest fraud detector for an imbalanced transaction dataset.", highlights: ["Achieved 97.47% precision.", "Achieved 87.01% F1 score.", "Evaluated false positives and false negatives with a confusion matrix."], technologies: ["Python", "pandas", "NumPy", "scikit-learn", "Matplotlib"], github: githubRepositoriesUrl, roles: ["ai-ml"] as RoleFocus[] },
+  { title: "FitnessIQ", category: "Software Engineering", status: "In Development", description: "Building a full-stack fitness platform for workout tracking and nutrition planning.", highlights: ["Designed a microservices backend with four core services.", "Uses Spring Boot and MySQL.", "Uses RabbitMQ for asynchronous communication.", "Uses Spring Cloud Config for centralized configuration.", "Integrates Gemini API for AI-assisted recommendations."], technologies: ["Java", "Spring Boot", "React", "MySQL", "Gemini API", "REST APIs", "Docker", "AWS", "RabbitMQ", "Microservices"], github: githubRepositoriesUrl, roles: ["software-engineering", "ai-ml"] as RoleFocus[] },
+  { title: "Markr", category: "Software Engineering", description: "Built a full-stack notes application supporting images, labels, and user-scoped data.", highlights: ["Owned the note-taking workflow across frontend, API, and database.", "Implemented collaborative note editing for authenticated users."], technologies: ["React", "Express.js", "MongoDB", "REST APIs", "Azure"], github: githubRepositoriesUrl, roles: ["software-engineering"] as RoleFocus[] },
+  { title: "Real-time Chat Rooms", category: "Software Engineering", description: "Built a real-time chat application using Socket.IO and bidirectional communication.", highlights: ["Messages update without page reloads.", "Implemented backend routing with Express."], technologies: ["JavaScript", "Node.js", "Express", "Socket.IO", "HTML", "CSS"], github: githubRepositoriesUrl, roles: ["software-engineering"] as RoleFocus[] },
+  { title: "Daft Open Source Contribution", category: "Software Engineering", description: "Contributed PySpark-compatible to_degrees and to_radians aliases to Daft's numeric expression API.", highlights: [], technologies: ["Python"], github: githubRepositoriesUrl, roles: ["software-engineering"] as RoleFocus[] },
 ];
 
-export const activities = [
-  { event: "AWS AI Summer Camp", title: "Accessibility VPAT Assessment", description: "Prototyped an AI-powered VPAT assessment workflow using AWS Bedrock.", highlights: ["Helps standardize accessibility review.", "Classifies findings into Ready, Denied, Human Review Required, and TAAP Required."], technologies: ["Python", "AWS Bedrock", "PyMuPDF", "Pytest"], github: undefined, roles: ["ai-ml", "software-engineering"] as RoleFocus[] },
-  { event: "Cal Hacks 2025", title: "Gret Support", description: undefined, highlights: [], technologies: [], github: undefined, roles: ["software-engineering", "ai-ml"] as RoleFocus[] },
-  { event: "Gemini 3 Hackathon", title: "Find My Spot", description: undefined, highlights: [], technologies: [], github: undefined, roles: ["ai-ml", "software-engineering"] as RoleFocus[] },
-  { event: "Kiro Hacks", title: undefined, description: undefined, highlights: [], technologies: [], github: undefined, roles: ["software-engineering"] as RoleFocus[] },
+export type Activity = {
+  event: string;
+  date?: string;
+  title?: string;
+  description?: string;
+  highlights: string[];
+  technologies: string[];
+  github?: string;
+  devpost?: string;
+  image?: string;
+  images?: string[];
+  imageAlt?: string;
+  reflection?: string;
+  roles: RoleFocus[];
+};
+
+export const activities: Activity[] = [
+  { event: "AWS AI Summer Camp", title: "Accessibility VPAT Assessment", description: "Prototyped an AI-powered VPAT assessment workflow using AWS Bedrock to help standardize accessibility review.", highlights: ["Ready", "Denied", "Human Review Required", "TAAP Required"], technologies: ["Python", "AWS Bedrock", "PyMuPDF", "Pytest"], github: undefined, image: undefined, imageAlt: "AWS AI Summer Camp project image", reflection: undefined, roles: ["ai-ml", "software-engineering"] as RoleFocus[] },
+  { event: "Cal Hacks 2025", title: "Gret Support", description: undefined, highlights: [], technologies: [], github: undefined, devpost: undefined, image: undefined, imageAlt: "Cal Hacks 2025 project image", reflection: undefined, roles: ["software-engineering", "ai-ml"] as RoleFocus[] },
+  { event: "Gemini 3 Hackathon", title: "Find My Spot", description: undefined, highlights: [], technologies: [], github: undefined, devpost: undefined, image: undefined, imageAlt: "Gemini 3 Hackathon project image", reflection: undefined, roles: ["ai-ml", "software-engineering"] as RoleFocus[] },
+  { event: "KiroHacks", title: undefined, description: undefined, highlights: [], technologies: [], github: undefined, devpost: undefined, image: undefined, imageAlt: "KiroHacks project image", reflection: undefined, roles: ["software-engineering", "ai-ml"] as RoleFocus[] },
 ];
 
-export const events = ["Google I/O 2026", "AI Symposium 2026", "UCLA Leadership Conference 2024"];
+export const events: Activity[] = [
+  { event: "Google I/O 2026", date: "2026", title: "Google I/O 2026", description: undefined, highlights: [], technologies: [], image: undefined, images: [], imageAlt: "Google I/O 2026 event photo", reflection: undefined, roles: ["ai-ml", "software-engineering"] as RoleFocus[] },
+  { event: "AI Symposium 2026", date: "2026", title: "AI Symposium 2026", description: undefined, highlights: [], technologies: [], image: undefined, imageAlt: "AI Symposium 2026 event photo", reflection: undefined, roles: ["ai-ml"] as RoleFocus[] },
+];
 
 export const presentation = { title: "Session Scout: An AI-Based Decision Support Tool for Discovering Relevant Conference Presentations", status: "Oral presentation accepted", venue: "2026 INFORMS Annual Meeting", location: "San Francisco, California", authors: ["Puneet Agarwal", "T. Erb", "A. Hill", "Yun Waddy Oo"], manuscript: "In preparation", roles: ["retrieval-research", "ai-ml"] as RoleFocus[] };
 
